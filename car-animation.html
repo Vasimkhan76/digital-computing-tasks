@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car animation</title>
+
+    <style>
+        .lw {
+            position: relative;
+            bottom: 68px;
+            left: 39px;
+            animation: left linear .30s infinite;
+
+        }
+
+        .rw {
+            position: relative;
+            left: 232px;
+            bottom: 149px;
+            animation: right linear .30s infinite;
+        }
+
+        .track {
+            width: 800vw;
+            animation: slide linear 5s infinite;
+
+        }
+
+        .carbody {
+            animation: car linear 5s infinite;
+        }
+
+        body {
+            animation: shake linear 5s infinite;
+            overflow: hidden;
+        }
+
+        .car {
+            position: absolute;
+            top: 380px;
+
+        }
+
+        @keyframes right {
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        @keyframes shake {
+
+            0% {
+                transform: translateY(-6px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-6px);
+            }
+
+        }
+
+        @keyframes left {
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        /* 
+        @keyframes left {
+
+            0% {
+                transform: translateY(-4px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-4px);
+            }
+
+        } */
+
+        @keyframes slide {
+
+            100% {
+                transform: translateX(-500vw);
+            }
+
+        }
+
+        @keyframes car {
+
+            0% {
+                transform: translateY(-4px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-4px);
+            }
+
+        }
+
+        @media only screen and (min-width:768px) {
+
+            .rw {
+                position: relative;
+                bottom: 304px;
+                left: 117px;
+                
+
+
+            }
+
+            .lw {
+
+                position: relative;
+                bottom: 95px;
+                left: 656px;
+
+            }
+            .carbody{
+                position:relative;
+                top: 80px;
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div>
+        <div class="bg-[url(background.jpg)]  h-screen w-full bg-no-repeat">
+
+            <div class="bg-[url(trees.png)] h-full w-full bg-repeat-x bg-cover absolute bottom-52">
+
+            </div>
+            <div class="bg-[url(track.png)]  h-2/5 track   bg-repeat-x absolute top-96  md:top-3/4">
+
+
+            </div>
+            <div class=" car">
+                <img src="car_body.png" alt="car" class=" carbody h-full w-full md:">
+                <img src="car_wheel_left.png" alt="" class=" h-20 w-20 lw   md:h-48 md:w-40">
+                <img src="car_wheel_right.png" alt="" class=" h-20 w-20 rw md:h-52  md:w-52 ">
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+>
